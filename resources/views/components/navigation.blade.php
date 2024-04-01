@@ -4,7 +4,9 @@
       
             <a href="/home" class="text-dark text-decoration-none  btn btn-sm btn">Home</a>
 
-            <a href="/account" class="text-dark text-decoration-none  btn btn-sm btn">Account</a>
+
+            <a href="/ranking" class="text-dark text-decoration-none  btn btn-sm btn">Ranking</a>
+
 
     </div>
     
