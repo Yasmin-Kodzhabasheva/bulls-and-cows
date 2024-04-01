@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\UsersController;
 
 
 /*
@@ -21,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('home');
-});
+})->middleware('auth');
 
 Route::get('/register-form', function() {
     return view('register-form');
@@ -29,13 +30,14 @@ Route::get('/register-form', function() {
 
 Route::get('/login-form', function() {
     return view('login-form');
-});
+})->name('login');
 
-Route::get('/account', function() {
-    return view('account');
-});
+Route::get('/ranking', [GameController::class, "rankPlayers"])->middleware('auth');
 
 
 Route::post('/register', [UsersController::class, 'register']);
 Route::post('/login', [UsersController::class, 'login']);
 Route::post('/logout', [UsersController::class, 'logout']);
+Route::post('/game-score', [GameController::class, 'addScore']);
+
+
