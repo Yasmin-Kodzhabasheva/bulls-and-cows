@@ -26,7 +26,7 @@ Route::get('/home', function () {
 
 Route::get('/register-form', function() {
     return view('register-form');
-});
+})->name('register');
 
 Route::get('/login-form', function() {
     return view('login-form');
