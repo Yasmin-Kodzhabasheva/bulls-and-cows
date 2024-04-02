@@ -11,9 +11,9 @@
               <th>Cows</th>
               <th>Total Points</th>
           </tr>
-          @foreach ($rankings as $index => $rank)
+          @foreach ($rankings as $rank)
               <tr>
-                  <td class="text-center">{{ $index + 1 }}</td>
+                  <td class="text-center">{{ $index += 1}}</td>
                   <td class="text-center">{{ $rank->username }}</td>
                   <td class="text-center">{{ $rank->bulls }}</td>
                   <td class="text-center">{{ $rank->cows }}</td>
