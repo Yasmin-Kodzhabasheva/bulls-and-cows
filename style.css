@@ -1,0 +1,21 @@
+#app,
+.hidden-numbers-container,
+.hidden-numbers,
+.hidden-numbers-heading {
+  display: flex;
+}
+
+#app {
+  flex-direction: column;
+  align-items: center;
+}
+
+#app,
+.hidden-numbers-container,
+.hidden-numbers {
+  gap: 1em;
+}
+
+.hidden-numbers-heading {
+  gap: 0.5em;
+}
